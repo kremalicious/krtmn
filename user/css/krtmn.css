@@ -17,7 +17,6 @@ h1 {
 	margin-bottom: 0;
 	line-height: 1em;
 	color: #a8b5b9;
-	
 }
 
 header h1 {
@@ -27,6 +26,11 @@ header h1 {
 
 p {
 	line-height: 1em;
+}
+
+strong {
+	font-weight: 100;
+	color: #dceef3;
 }
 
 article,

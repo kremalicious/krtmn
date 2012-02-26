@@ -19,3 +19,4 @@ CVS
 
 # yourls files
 user/config.php
+.htaccess

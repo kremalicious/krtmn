@@ -28,11 +28,6 @@ p {
 	line-height: 1em;
 }
 
-strong {
-	font-weight: 100;
-	color: #dceef3;
-}
-
 article,
 footer {
 	position: relative;

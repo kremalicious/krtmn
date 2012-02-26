@@ -27,7 +27,7 @@ $items = yourls_api_stats( 'last', 1 );
 	</header>
 	<article role="main">
 		<?php foreach( $items['links'] as $item ) { ?>
-			<p>Latest shortened link: <strong><?php echo $item['title']; ?></strong> | <a href="<?php echo $item['shorturl']; ?>"><?php echo $item['shorturl']; ?></a></p>
+			<p>Latest shortened link: <a href="<?php echo $item['shorturl']; ?>"><?php echo $item['title']; ?> | <?php echo $item['shorturl']; ?></a></p>
 		<?php } ?>
 		
 	</article>

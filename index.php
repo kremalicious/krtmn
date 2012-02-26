@@ -35,11 +35,12 @@ $items = yourls_api_stats( 'last', 1 );
 		<small>personal url shortener of web &amp; ui designer <a href="http://mkretschmann.com">matthias kretschmann</a>. You should follow me on <a href="http://twitter.com/kremalicious">twitter</a>.</small>
 	</footer>
 
-<!--  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>-->
+	<script>
+	    var _gaq=[['_setAccount','UA-1441794-9'],['_trackPageview']];
+	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	    s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+  
 </body>
 </html>

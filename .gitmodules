@@ -1,0 +1,3 @@
+[submodule "user/plugins/yourls-pseudonymize"]
+	path = user/plugins/yourls-pseudonymize
+	url = https://github.com/ubicoo/yourls-pseudonymize.git

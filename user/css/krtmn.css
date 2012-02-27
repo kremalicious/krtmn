@@ -73,6 +73,22 @@ a, a:link, a:active, a:visited {
 input.text, select, textarea {
 	border: 1px solid #2c3637;
 	padding: .5em;
+	outline: none;
+	background: rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+	color: #fff;
+}
+
+input.text:focus, textarea:focus {
+	border: 1px solid #28cbc3;
+	outline: none;
+	-webkit-box-shadow: 0 0 8px #28cbc3 !important;
+	-moz-box-shadow: 0 0 8px #28cbc3 !important;
+	box-shadow: 0 0 8px #28cbc3 !important;
+	margin: 1px;
+	background: rgba(0, 0, 0, .4);
 }
 
 input.button {
@@ -87,6 +103,8 @@ input.button {
 	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	background-image: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	color: #fff;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.3);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.3);
 	box-shadow: 0 1px 0 rgba(255,255,255,.3);
 	border: 1px solid #2c3637;
 	border-top-color: #000;
@@ -162,7 +180,7 @@ ul#admin_menu {
 }
 
 #new_url_form input {
-	
+	max-width: 94%;
 	border-color: #2c3637;
 	font-weight: bold;
 }
@@ -222,6 +240,21 @@ table.tblSorter td.clicks {
 }
 
 
+
+/* ============================================================== */
+/*  Animations */
+/* ============================================================== */
+
+a,
+input {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+
 /* ============================================================== */
 /*  Login */
 /* ============================================================== */
@@ -230,6 +263,19 @@ table.tblSorter td.clicks {
 	width: auto;
 	max-width: 320px;
 	margin: 15% auto 0px auto;
+}
+
+#login:before {
+	content: "krt.mn";
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	border-bottom: 1px dashed #2f393b;
+	width: 100%;
+	padding-bottom: .5em;
+	display: block;
+	color: #a8b5b9;
+	text-shadow: 0 -1px 0 #2f393b;
 }
 
 #login .text {
@@ -246,10 +292,12 @@ table.tblSorter td.clicks {
 	margin-top: 1.5em;
 }
 
-.error {
-	text-align: center;
+#login p.error {
+	text-align: center !important;
 	padding: 1em;
 	border-radius: 5px;
+	background: rgba(255, 238, 238, .3);
+	color: #4e1b1c;
 }
 
 

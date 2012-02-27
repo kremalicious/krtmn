@@ -18,6 +18,11 @@ $items = yourls_api_stats( 'last', 1 );
 	<link rel="stylesheet" href="user/css/h5bp.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="user/css/krtmn.css">
+	
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+	<link rel="shortcut icon" href="/apple-touch-icon-precomposed.png">
+	<link rel="shortcut icon" href="/favicon.ico">
 
 </head>
 <body id="public">

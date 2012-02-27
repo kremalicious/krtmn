@@ -686,6 +686,11 @@ body#public {
 	margin: 1em 0;
 }
 
+#public article a .title {
+	color: #a8b5b9;
+	margin-left: .5em;
+}
+
 
 @media only screen and (max-width: 600px){ 
 	

@@ -32,7 +32,7 @@ $items = yourls_api_stats( 'last', 1 );
 	</header>
 	<article role="main">
 		<?php foreach( $items['links'] as $item ) { ?>
-			<p>Latest shortened link: <a href="<?php echo $item['shorturl']; ?>"><?php echo $item['title']; ?> | <?php echo $item['shorturl']; ?></a></p>
+			<p>Latest short url: <a href="<?php echo $item['shorturl']; ?>"><?php echo $item['shorturl']; ?> <span class="title"><?php echo $item['title']; ?></span></a></p>
 		<?php } ?>
 		
 	</article>

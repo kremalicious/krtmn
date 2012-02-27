@@ -81,37 +81,45 @@ input.text, select, textarea {
 	color: #fff;
 }
 
-input.text:focus, textarea:focus {
-	border: 1px solid #28cbc3;
-	outline: none;
-	-webkit-box-shadow: 0 0 8px #28cbc3 !important;
-	-moz-box-shadow: 0 0 8px #28cbc3 !important;
-	box-shadow: 0 0 8px #28cbc3 !important;
-	margin: 1px;
-	background: rgba(0, 0, 0, .4);
+	input.text:focus, textarea:focus {
+		border: 1px solid #28cbc3;
+		outline: none;
+		-webkit-box-shadow: 0 0 8px #28cbc3 !important;
+		-moz-box-shadow: 0 0 8px #28cbc3 !important;
+		box-shadow: 0 0 8px #28cbc3 !important;
+		margin: 1px;
+		background: rgba(0, 0, 0, .4);
+	}
+
+::-webkit-input-placeholder,
+::-moz-input-placeholder {
+	color: rgba(255,255,255,.2);
+	font-weight: normal;
 }
 
 input.button {
 	margin: .5em 0;
 	padding: .5em 2em !important;
 	display: inline-block;
-	background-color: #3a4547;
+	background-color: #28cbc3;
 	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.4)));
 	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
 	background-image: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
-	color: #fff;
-	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.3);
-	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.3);
-	box-shadow: 0 1px 0 rgba(255,255,255,.3);
-	border: 1px solid #2c3637;
+	color: #082a28;
+	box-shadow: 0 1px 0 rgba(255,255,255,.3), inset 0 1px 0 rgba(255,255,255,.6);
+	border: 1px solid #0b3836;
 	border-top-color: #000;
+	text-shadow: 0 1px 0 rgba(255,255,255,.4);
+	border-radius: 5px;
+	font-size: .9em;
+	font-weight: bold;
 }
 
 	input.button:hover {
-		background-color: #3d4a4c;
+		background-color: #2adbd4;
 	}
 
 .edit-row input.text {
@@ -128,6 +136,7 @@ ul#admin_menu {
 	border-top: 1px dashed rgba(255,255,255,.1);
 	border-bottom: 1px dashed rgba(255,255,255,.1);
 	margin-bottom: 2em;
+	position: relative;
 }
 
 	ul#admin_menu:after {
@@ -140,21 +149,38 @@ ul#admin_menu {
 		border-bottom: 1px dashed #2f393b;
 	}
 
-#admin_menu li {
+ul#admin_menu li {
 	display: inline;
 }
 
-.admin_menu_toplevel a {
+ul#admin_menu a {
 	padding: .5em 2em;
 	display: inline-block;
-	
 }
 
-#admin_menu li,
-.admin_menu_toplevel a {
+ul#admin_menu a:hover {
+	background: rgba(255,255,255,.2);
+	text-decoration: none;
+}
+
+ul#admin_menu li,
+ul#admin_menu a {
 	text-shadow: 0 1px 0 #000;
 }
 
+
+ul#admin_menu li#admin_menu_logout_link {
+	position: absolute;
+	top: -100%;
+	right: 0;
+	color: #191e1f;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1);
+	font-size: .8em;
+}
+
+ul#admin_menu li#admin_menu_logout_link a {
+	padding: .5em;
+}
 
 /* ============================================================== */
 /*  New URL */
@@ -163,6 +189,10 @@ ul#admin_menu {
 #new_url {
 	margin-bottom: 2em;
 	background: rgba(0,0,0,.1);
+	border-radius: 5px;
+	border: 1px solid #354143;
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 1px 10px #354143;
+	margin-top: 2em;
 }
 
 #new_url div {
@@ -172,27 +202,41 @@ ul#admin_menu {
 }
 
 #new_url_form {
-	padding: 1.5em 1em;
+	padding: 1em .5em;
 }
 
-#new_url_form strong {
-	display: none;
+#new_url_form label {
+	display: block;
+}
+
+#new_url div {
+	overflow: hidden;
+	padding-left: .2em;
+	padding-right: .2em;
+}
+
+#new_url_form p {
+	margin-top: 0;
 }
 
 #new_url_form input {
 	max-width: 94%;
 	border-color: #2c3637;
 	font-weight: bold;
+	float: left;
 }
 
 input#add-url {
-	
+	width: 75%;
 }
 
-
+input#add-keyword {
+	width: 10%;
+	float: right;
+}
 
 #new_url_form input.button {
-	margin-left: 5px;
+	clear: both;
 }
 
 
@@ -246,7 +290,8 @@ table.tblSorter td.clicks {
 /* ============================================================== */
 
 a,
-input {
+input,
+td {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;

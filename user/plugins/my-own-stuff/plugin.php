@@ -45,6 +45,12 @@ function krtmn_touch_icons() {
 }
 
 
+// custom viewport
+yourls_add_action( 'html_head', 'krtmn_viewport' );
+
+function krtmn_viewport() {
+	echo '<meta name="viewport" content="width=device-width">';
+}
 
 
 

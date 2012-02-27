@@ -372,6 +372,12 @@ h3 span.label {
 ul.toggle_display {
 	border-bottom: 1px solid #333;
 	box-shadow: 0 1px 0 rgba(255,255,255,.2);
+	padding: 0;
+}
+
+.tab {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 #tabs ul#headers li a,
@@ -381,14 +387,31 @@ ul.toggle_display {
 	color: #28CBC3;
 	border: none;
 	background: transparent;
-	border-radius: 0;
+	border: 1px solid transparent;
+	padding-bottom: 2px;
 }
 
 #tabs ul#headers li a.selected,
-#stats_lines li a.selected,
-#tabs ul#headers li a:hover {
-	background: rgba(255,255,255,.2);
+#stats_lines li a.selected {
+	background-color: rgba(0,0,0,.1);
+	background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 100%);
+	background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.03)), color-stop(40%,rgba(255,255,255,0.03)), color-stop(41%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
+	background-image: -o-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
+	border-radius: 5px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border: 1px solid #354143;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+	
 	color: rgba(0,0,0,0);
+}
+
+#tabs ul#headers li a:hover {
+	background-color: rgba(0,0,0,.1);
 }
 
 #stats_lines li a.selected:hover {
@@ -404,6 +427,10 @@ ul.toggle_display {
 	font-size: 1em;
 }
 
+#historical_clicks li,
+#historical_clicks li:hover {
+	background: none !important;
+}
 
 /* ============================================================== */
 /*  Animations */

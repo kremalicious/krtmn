@@ -87,12 +87,45 @@ a:hover {
 }
 
 .icon:before,
-td.actions .button:before {
+td.actions .button:before,
+li#admin_menu_logout_link:before,
+#admin_menu li.admin_menu_toplevel a:before,
+li#admin_menu_help_link a:before {
 	font-family: 'iconSweetsRegular';
+	font-weight: normal;
 }
 
 .icon.link:before {
 	content: "Q";
+}
+
+li#admin_menu_logout_link:before {
+	content: "d";
+	margin-right: .5em;
+	font-size: 16px;
+}
+
+#admin_menu li.admin_menu_toplevel a:before {
+	margin-right: .7em;
+	font-size: 16px;
+}
+
+li#admin_menu_admin_link a:before {
+	content: "0";
+}
+
+li#admin_menu_tools_link a:before {
+	content: "m";
+}
+
+li#admin_menu_plugins_link a:before {
+	content: "l";
+}
+
+li#admin_menu_help_link a:before {
+	content: "?";
+	margin-right: .7em;
+	font-size: 16px;
 }
 
 #public h1.icon.link:before {
@@ -147,6 +180,12 @@ td.actions .button_delete:before {
 	td.actions .button_delete:hover:before {
 		color: #4e1b1c;
 	}
+
+td.actions .button.disabled, #add-button.disabled {
+	border: none;
+	background: transparent;
+	opacity: .4;
+}
 
 #wrap > h1:first-child {
 	display: none;

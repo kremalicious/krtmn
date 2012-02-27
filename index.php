@@ -28,7 +28,7 @@ $items = yourls_api_stats( 'last', 1 );
 <body id="public">
 
 	<header>
-		<h1>krt.mn</h1>
+		<h1><a href="/admin">krt.mn</a></h1>
 	</header>
 	<article role="main">
 		<?php foreach( $items['links'] as $item ) { ?>

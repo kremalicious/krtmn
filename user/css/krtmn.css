@@ -510,13 +510,15 @@ body#public {
 	padding: 5%;
 }
 
-#public h1 {
+#public h1,
+#public h1 a {
 	font-weight: 100;
 	font-style: normal;
 	margin-bottom: 0;
 	line-height: 1em;
 	color: #a8b5b9;
 	text-shadow: 0 -1px 0 #2f393b;
+	cursor: default;
 }
 
 #public header h1 {

@@ -221,7 +221,7 @@ ul#admin_menu li#admin_menu_logout_link a {
 }
 
 #new_url_form {
-	padding: 1em .5em;
+	padding: 1em;
 }
 
 #new_url_form label {
@@ -229,29 +229,28 @@ ul#admin_menu li#admin_menu_logout_link a {
 }
 
 #new_url div {
-	overflow: hidden;
-	padding-left: .2em;
-	padding-right: .2em;
+	position: relative;
 }
 
 #new_url_form p {
 	margin-top: 0;
+	margin-bottom: .5em;
 }
 
 #new_url_form input {
-	max-width: 94%;
 	border-color: #2c3637;
 	font-weight: bold;
-	float: left;
 }
 
 input#add-url {
-	width: 75%;
+	width: 98%;
 }
 
 input#add-keyword {
-	width: 10%;
-	float: right;
+	width: 4em;
+	position: absolute;
+	bottom: .4em;
+	right: 0;
 }
 
 #new_url_form input.button {
@@ -263,8 +262,28 @@ input#add-keyword {
 /*  Main Table */
 /* ============================================================== */
 
+table {
+	border-spacing: 0;
+}
+
+table.tblSorter thead th.header,
+table.tblSorter thead th#main_table_head_actions {
+	border-bottom: 1px solid #333;
+}
+
 table.tblSorter tbody td {
-	padding: 1em .3em;
+	padding: 1.3em .3em;
+	border-bottom: 1px dashed #333;
+	border-top: 1px dashed rgba(255,255,255,.2);
+	margin: 0;
+}
+
+table.tblSorter tbody tr:first-child td {
+	border-top: 1px solid rgba(255,255,255,.2);
+}
+
+table.tblSorter tbody tr:last-child td {
+	border-bottom: 1px dashed #333;
 }
 
 table.tblSorter td.timestamp,
@@ -315,7 +334,8 @@ table.tblSorter td.clicks {
 
 a,
 input,
-td {
+td,
+#public footer {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
@@ -375,10 +395,7 @@ td {
 /* ============================================================== */
 
 body#public {
-	font: 16px/22px 'Lato', sans-serif;
 	text-align: center;	
-	font-weight: 100;
-	font-style: normal;
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 5%;
@@ -395,11 +412,10 @@ body#public {
 
 #public header h1 {
 	font-size: 6em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-style: normal;
 	margin-bottom: 30px;
-}
-
-#public p {
-	line-height: 1em;
 }
 
 #public article,
@@ -422,8 +438,122 @@ body#public {
 
 #public footer {
 	padding-top: 1em;
+	font-size: .8em;
+	opacity: .5;
 }
+
+	#public footer:hover {
+		opacity: 1;
+	}
 	
 #public article p {
 	margin: 1em 0;
+}
+
+
+@media only screen and (max-width: 600px){ 
+	
+	table,
+	table tbody,
+	table tr,
+	table td,
+	table a {
+		position: relative;
+		display: block;
+		width: auto !important;
+		margin: 0;
+		padding: 0;
+		background-color: transparent ;
+	}
+	
+	table tr {
+		position: relative;
+		padding: 1em 0;
+	}
+	
+	tbody td {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	
+	thead,
+	tfoot,
+	table br {
+		display: none;
+	}
+	
+	table.tblSorter tbody tr:hover td,
+	.sub_wrap span,
+	tt,
+	code,
+	table.tblSorter thead tr .headerSortDown, table.tblSorter thead tr .headerSortUp,
+	tr.edit-row td,
+	a.bookmarklet {
+		background: transparent !important;
+	}
+	
+	table.tblSorter tbody td,
+	table.tblSorter tbody tr:first-child td,
+	table.tblSorter tbody tr:last-child td {
+		border: none;
+	}
+	
+	table.tblSorter tbody tr {
+		border-bottom: 1px dashed #333;
+		border-top: 1px dashed rgba(255,255,255,.2);
+	}
+	
+	table.tblSorter td.keyword a {
+		display: inline-block;
+		background: rgba(0, 0, 0, .1);
+		padding: .3em 1em;
+		margin-bottom: .5em;
+		border-radius: 5px;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+	}
+	
+	table.tblSorter td.timestamp, 
+	table.tblSorter td.ip {
+		display: inline;
+	}
+	
+	table.tblSorter td.clicks {
+		position: absolute;
+		top: 1em;
+		right: 0;
+	}
+	
+	table.tblSorter td.actions {
+		overflow: hidden;
+	}
+	
+	td.actions .button {
+		width: 32px !important;
+		height: 32px;
+		display: inline-block;
+	}
+	
+	input#add-url {
+		width: 94%;
+	}
+	
+	ul#admin_menu a {
+		padding: .5em;
+		display: inline-block;
+		font-size: .8em;
+	}
+	
+	ul#admin_menu li#admin_menu_logout_link {
+		position: absolute;
+		top: -2.2em;
+		right: 0;
+		color: #191e1f;
+		text-shadow: 0 1px 0 rgba(255,255,255,.1);
+		font-size: .8em;
+	}
+	
+	li#admin_menu_help_link {
+		display: none !important;
+	}
+	
 }

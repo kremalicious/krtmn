@@ -20,7 +20,7 @@ $items = yourls_api_stats( 'last', 1 );
 	<link rel="stylesheet" href="user/css/krtmn.css">
 
 </head>
-<body>
+<body id="public">
 
 	<header>
 		<h1>krt.mn</h1>

@@ -1,17 +1,275 @@
 body {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 5%;
+	background: #516062;
+}
+
+/*font reset*/
+body, input.text, select, textarea,
+div, p, td,
+input.button,
+table.tblSorter,
+#main_table tfoot th, #main_table tfoot th div {
+	font: normal 16px/22px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+/*main text color*/
+body,
+table.tblSorter tbody td {
+	color: #191e1f;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1);
+}
+
+#wrap {
+	max-width: 920px;
+	width: auto;
+	border-radius: 0;
+	border: none;
+	background: none;
+	padding: 2%;
+}
+
+.sub_wrap {
+	width: 100%;
+}
+
+#new_url,
+table.tblSorter,
+table.tblSorter tbody td,
+table.tblSorter thead tr th, table.tblSorter tfoot tr th, table.tblSorter th.header,
+table.tblSorter tfoot tr {
+	background: none;
+}
+
+table.tblSorter tbody tr:hover td,
+.sub_wrap span,
+tt,
+code,
+table.tblSorter thead tr .headerSortDown, table.tblSorter thead tr .headerSortUp,
+tr.edit-row td,
+a.bookmarklet {
+	background: rgba(0,0,0,.2) !important;
+}
+
+tr.plugin.inactive {
+	opacity: .5;
+}
+
+#new_url,
+table.tblSorter thead tr th, table.tblSorter tfoot tr th, table.tblSorter th.header {
+	border: none;
+}
+
+a, a:link, a:active, a:visited {
+	color: #fff;
+}
+
+#wrap > h1:first-child {
+	display: none;
+}
+
+/* ============================================================== */
+/*  Forms & Inputs */
+/* ============================================================== */
+
+input.text, select, textarea {
+	border: 1px solid #2c3637;
+	padding: .5em;
+}
+
+input.button {
+	margin: .5em 0;
+	padding: .5em 2em !important;
+	display: inline-block;
+	background-color: #3a4547;
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.4)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+	color: #fff;
+	box-shadow: 0 1px 0 rgba(255,255,255,.3);
+	border: 1px solid #2c3637;
+	border-top-color: #000;
+}
+
+	input.button:hover {
+		background-color: #3d4a4c;
+	}
+
+.edit-row input.text {
+	margin-bottom: 1em;
+}
+
+/* ============================================================== */
+/*  Admin Menu */
+/* ============================================================== */
+
+ul#admin_menu {
+	min-height: 10px;
+	position: relative;
+	border-top: 1px dashed rgba(255,255,255,.1);
+	border-bottom: 1px dashed rgba(255,255,255,.1);
+	margin-bottom: 2em;
+}
+
+	ul#admin_menu:after {
+		content: "";
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		border-bottom: 1px dashed #2f393b;
+	}
+
+#admin_menu li {
+	display: inline;
+}
+
+.admin_menu_toplevel a {
+	padding: .5em 2em;
+	display: inline-block;
+	
+}
+
+#admin_menu li,
+.admin_menu_toplevel a {
+	text-shadow: 0 1px 0 #000;
+}
+
+
+/* ============================================================== */
+/*  New URL */
+/* ============================================================== */
+
+#new_url {
+	margin-bottom: 2em;
+	background: rgba(0,0,0,.1);
+}
+
+#new_url div {
+	background: none;
+	padding: 0;
+	text-align: left;
+}
+
+#new_url_form {
+	padding: 1.5em 1em;
+}
+
+#new_url_form strong {
+	display: none;
+}
+
+#new_url_form input {
+	
+	border-color: #2c3637;
+	font-weight: bold;
+}
+
+input#add-url {
+	
+}
+
+
+
+#new_url_form input.button {
+	margin-left: 5px;
+}
+
+
+/* ============================================================== */
+/*  Main Table */
+/* ============================================================== */
+
+table.tblSorter tbody td {
+	padding: 1em .3em;
+}
+
+table.tblSorter td.timestamp,
+table.tblSorter td.ip {
+	font-size: .8em;
+	
+}
+
+table.tblSorter td.clicks {
+	font-size: 2em;
+	font-family: Georgia, serif;
+	font-style: italic;
+	padding: .3em;
+}
+
+#filter_form {
+	margin-top: 4em;
+	opacity: .2;
+}
+
+	#filter_form:hover {
+		opacity: 1;
+	}
+
+
+#main_table tfoot th div {
+	font-size: .8em;
+}
+
+/* ============================================================== */
+/*  Global Footer */
+/* ============================================================== */
+
+#footer {
+	display: none;
+}
+
+
+/* ============================================================== */
+/*  Login */
+/* ============================================================== */
+
+#login {
+	width: auto;
+	max-width: 320px;
+	margin: 15% auto 0px auto;
+}
+
+#login .text {
+	width: 94%;
+}
+
+#login p {
+	text-align: left !important;
+}
+
+#login input.button {
+	display: block;
+	width: 100%;
+	margin-top: 1.5em;
+}
+
+.error {
 	text-align: center;
+	padding: 1em;
+	border-radius: 5px;
+}
+
+
+/* ============================================================== */
+/*  Public Page */
+/* ============================================================== */
+
+body#public {
 	font: 16px/22px 'Lato', sans-serif;
-	background-color: #516062;
+	text-align: center;
 	color: #a8b5b9;
 	text-shadow: 0 -1px 0 #2f393b;
 	font-weight: 100;
 	font-style: normal;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 5%;
 }
 
-h1 {
+#public h1 {
 	font-weight: 100;
 	font-style: normal;
 	margin-bottom: 0;
@@ -19,23 +277,24 @@ h1 {
 	color: #a8b5b9;
 }
 
-header h1 {
+#public header h1 {
 	font-size: 6em;
 	margin-bottom: 30px;
 }
 
-p {
+#public p {
 	line-height: 1em;
 }
 
-article,
-footer {
+#public article,
+#public footer {
 	position: relative;
 	border-top: 1px dashed rgba(255,255,255,.2);
 }
 
-	article:before,
-	footer:before {
+	#public article:before,
+	#public footer:before,
+	ul#admin_menu:before {
 		content: "";
 		width: 100%;
 		height: 1px;
@@ -45,15 +304,15 @@ footer {
 		border-top: 1px dashed #2f393b;
 	}
 
-footer {
+#public footer {
 	padding-top: 1em;
 }
 	
-article p {
+#public article p {
 	margin: 1em 0;
 }
 
-a {
+#public a {
 	color: #c5d5da;
 	text-decoration: none;
 	-webkit-transition: color .4s ease-in-out 0s;
@@ -63,9 +322,9 @@ a {
 	transition: color .4s ease-in-out 0s;
 }
 
-a:hover {
+#public a:hover {
 	color: #28cbc3;
 }
 
-::-moz-selection { background: #000; }
-::selection { background: #000; }
+#public ::-moz-selection { background: #000; }
+#public ::selection { background: #000; }

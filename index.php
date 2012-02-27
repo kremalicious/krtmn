@@ -16,7 +16,7 @@ $items = yourls_api_stats( 'last', 1 );
 	<meta name="viewport" content="width=device-width">
 	
 	<link rel="stylesheet" href="user/css/h5bp.css">
-	<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="user/css/krtmn.css">
 	
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
@@ -28,7 +28,7 @@ $items = yourls_api_stats( 'last', 1 );
 <body id="public">
 
 	<header>
-		<h1><a href="/admin">krt.mn</a></h1>
+		<h1 class="icon link"><a href="/admin">krt.mn</a></h1>
 	</header>
 	<article role="main">
 		<?php foreach( $items['links'] as $item ) { ?>

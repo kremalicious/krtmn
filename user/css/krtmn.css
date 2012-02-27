@@ -68,12 +68,90 @@ a:hover {
 	color: #fff;
 }
 
+::-moz-selection { background: #000; color: #fff; }
+::selection { background: #000; color: #fff }
+
+/* ============================================================== */
+/*  Icons */
+/* ============================================================== */
+
+@font-face {
+    font-family: 'iconSweetsRegular';
+    src: url('../fonts/iconsweets-webfont.eot');
+    src: url('../fonts/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/iconsweets-webfont.woff') format('woff'),
+         url('../fonts/iconsweets-webfont.ttf') format('truetype'),
+         url('../fonts/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before,
+td.actions .button:before {
+	font-family: 'iconSweetsRegular';
+}
+
+.icon.link:before {
+	content: "Q";
+}
+
+#public h1.icon.link:before {
+	display: block;
+	font-size: .8em;
+}
+
+/* Action Icons */
+
+table.tblSorter tbody td.actions {
+	padding-top: .6em;
+}
+
+td.actions .button {
+	overflow: hidden;
+	color: #191e1f;
+	font-size: 16px;
+	background: none;
+	text-indent: 0;
+	height: 32px;
+	width: 32px;
+	border: none !important;
+}
+
+td.actions .button:before {
+	margin-right: 1em;
+	margin-left: .2em;
+	font-size: 1.5em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
+	td.actions .button:hover:before {
+		color: #28cbc3;
+	}
+
+td.actions .button_stats:before {
+	content: "*";
+}
+
+td.actions .button_share:before {
+	content: "w";
+}
+
+td.actions .button_edit:before {
+	content: "8";
+}
+
+td.actions .button_delete:before {
+	content: "X";
+}
+
+	td.actions .button_delete:hover:before {
+		color: #4e1b1c;
+	}
+
 #wrap > h1:first-child {
 	display: none;
 }
 
-::-moz-selection { background: #000; color: #fff; }
-::selection { background: #000; color: #fff }
 
 /* ============================================================== */
 /*  Forms & Inputs */
@@ -444,7 +522,8 @@ ul.toggle_display {
 a,
 input,
 td,
-#public footer {
+#public footer,
+td.actions .button:before {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
@@ -527,6 +606,7 @@ body#public {
 	font-weight: 100;
 	font-style: normal;
 	margin-bottom: 30px;
+	margin-top: 0;
 }
 
 #public article,
@@ -681,6 +761,10 @@ body#public {
 		margin: .5em 0 !important;
 		float: none;
 		width: auto !important;
+	}
+	
+	table.tblSorter tbody td.actions {
+		margin-top: 1em !important;
 	}
 	
 }

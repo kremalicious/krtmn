@@ -303,6 +303,7 @@ input#copylink {
 
 table {
 	border-spacing: 0;
+	width: 100%;
 }
 
 table.tblSorter thead th.header,
@@ -356,6 +357,52 @@ table.tblSorter td.clicks {
 	display: none;
 }
 
+
+/* ============================================================== */
+/*  Stats */
+/* ============================================================== */
+
+h3 span.label {
+	width: 10em;
+	font-weight: normal;
+	font-size: .7em;
+}
+
+#tabs ul#headers,
+ul.toggle_display {
+	border-bottom: 1px solid #333;
+	box-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
+#tabs ul#headers li a,
+#tabs ul#headers li a.selected,
+#stats_lines li a,
+#stats_lines li a.selected {
+	color: #28CBC3;
+	border: none;
+	background: transparent;
+	border-radius: 0;
+}
+
+#tabs ul#headers li a.selected,
+#stats_lines li a.selected,
+#tabs ul#headers li a:hover {
+	background: rgba(255,255,255,.2);
+	color: rgba(0,0,0,0);
+}
+
+#stats_lines li a.selected:hover {
+	background: rgba(255,255,255,.2);
+}
+
+#tabs ul#headers {
+	float: none;
+	
+}
+
+#tabs ul#headers li a h2 {
+	font-size: 1em;
+}
 
 
 /* ============================================================== */

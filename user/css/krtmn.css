@@ -604,7 +604,8 @@ body#public {
 		margin-bottom: 1em;
 	}
 	
-	div.share {
+	div.share,
+	#sharebox {
 		margin: .5em 0 !important;
 		float: none;
 		width: auto !important;

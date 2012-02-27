@@ -325,6 +325,10 @@ table.tblSorter tbody tr:last-child td {
 	border-bottom: 1px dashed #333;
 }
 
+table.tblSorter tfoot{
+	display: none;
+}
+
 table.tblSorter td.timestamp,
 table.tblSorter td.ip {
 	font-size: .8em;
@@ -343,19 +347,6 @@ table.tblSorter td.clicks {
 	padding: .3em;
 }
 
-#filter_form {
-	margin-top: 4em;
-	opacity: .2;
-}
-
-	#filter_form:hover {
-		opacity: 1;
-	}
-
-
-#main_table tfoot th div {
-	font-size: .8em;
-}
 
 /* ============================================================== */
 /*  Global Footer */

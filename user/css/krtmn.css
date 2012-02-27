@@ -675,7 +675,13 @@ body#public {
 	#public footer:hover {
 		opacity: 1;
 	}
-	
+
+#public footer p {
+	margin: 0;
+	font-size: .9em;
+	line-height: 1.4em;
+}
+
 #public article p {
 	margin: 1em 0;
 }

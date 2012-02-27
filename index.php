@@ -37,7 +37,10 @@ $items = yourls_api_stats( 'last', 1 );
 		
 	</article>
 	<footer>
-		<small>personal url shortener of web &amp; ui designer <a href="http://mkretschmann.com">matthias kretschmann</a>. You should follow me on <a href="http://twitter.com/kremalicious">twitter</a>.</small>
+		
+			<p><small>personal url shortener of web &amp; ui designer <a href="http://mkretschmann.com">matthias kretschmann</a>. You should follow me on <a href="http://twitter.com/kremalicious">twitter</a>.</small></p>
+			<p><small>icon font <a href="http://iconsweets.com/">iconsweets</a></small></p>
+		
 	</footer>
 
 	<script>

@@ -139,8 +139,12 @@ function yourls_html_addnew( $url = '', $keyword = '' ) {
 	<div id="new_url">
 		<div>
 			<form id="new_url_form" action="" method="get">
-				<div><strong>Enter the URL</strong>:<input type="text" id="add-url" name="url" value="<?php echo $url; ?>" class="text" size="80" />
-				Optional: <strong>Custom short URL</strong>:<input type="text" id="add-keyword" name="keyword" value="<?php echo $keyword; ?>" class="text" size="8" />
+				<div>
+					<label for="add-url">Enter the URL</label>
+					<p>
+						<input type="text" id="add-url" name="url" value="<?php echo $url; ?>" class="text" size="80" />
+						<input type="text" id="add-keyword" name="keyword" value="<?php echo $keyword; ?>" class="text" placeholder="Custom" size="8" />
+					</p>
 				<?php yourls_nonce_field( 'add_url', 'nonce-add' ); ?>
 				<input type="button" id="add-button" name="add-button" value="Shorten The URL" class="button" onclick="add();" /></div>
 			</form>

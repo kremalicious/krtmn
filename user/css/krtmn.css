@@ -844,6 +844,10 @@ body#public {
 		width: 94%;
 	}
 	
+	ul#admin_menu {
+		margin-bottom: 1em;
+	}
+	
 	ul#admin_menu a {
 		padding: .1em;
 		font-size: .7em;
@@ -870,7 +874,8 @@ body#public {
 		}
 	
 	#new_url {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
+		margin-top: 0;
 	}
 	
 	div.share,

@@ -1,5 +1,13 @@
 body {
-	background: #516062;
+	background-color: #516062;
+	background-image: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-gradient(radial, center top, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -o-radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: -ms-radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-image: radial-gradient(top, ellipse cover, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 /*font reset*/

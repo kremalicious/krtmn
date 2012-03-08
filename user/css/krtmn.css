@@ -1,3 +1,5 @@
+@import '../fonts/font-awesome/css/font-awesome.css';
+
 html, body {
 	background: #516062;
 }
@@ -78,80 +80,57 @@ a:hover {
 /*  Icons */
 /* ============================================================== */
 
-@font-face {
-    font-family: 'iconSweetsRegular';
-    src: url('../fonts/iconsweets-webfont.eot');
-    src: url('../fonts/iconsweets-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/iconsweets-webfont.woff') format('woff'),
-         url('../fonts/iconsweets-webfont.ttf') format('truetype'),
-         url('../fonts/iconsweets-webfont.svg#iconSweetsRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.icon:before,
-td.actions .button:before,
-li#admin_menu_logout_link:before,
-#admin_menu li.admin_menu_toplevel a:before,
-li#admin_menu_help_link a:before,
-.error:before {
-	font-family: 'iconSweetsRegular';
-	font-weight: normal;
-}
-
-.icon.link:before {
-	content: "Q";
-}
-
-li#admin_menu_logout_link:before {
-	content: "d";
-	margin-right: .5em;
-	font-size: 16px;
-}
-
-#admin_menu li.admin_menu_toplevel a:before,
-li#admin_menu_help_link a:before {
-	margin-right: .7em;
-	margin-left: -.7em;
-	font-size: 16px;
-	color: #191e1f;
-	text-shadow: 0 1px 0 rgba(255,255,255,.1);
-	font-size: 24px;
-	vertical-align: text-bottom;
-	position: relative;
-	top: -.1em;
-}
-
-li#admin_menu_admin_link a:before {
-	content: "0";
-}
-
-li#admin_menu_tools_link a:before {
-	content: "m";
-}
-
-li#admin_menu_plugins_link a:before {
-	content: "l";
-}
-
-li#admin_menu_help_link a:before {
-	content: "?";
-	margin-right: .7em;
-}
-
-#public h1.icon.link:before {
+#public h1 i {
 	display: block;
 	font-size: .8em;
 }
 
+/*additional font-awesome definitions*/
+.error:before,
+li#admin_menu_logout_link:before,
+#admin_menu li.admin_menu_toplevel a:before,
+td.actions .button:before,
+#toggle_plugins {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+}
+
 .error:before {
-	content: "!";
+	content: "\f071";
 	margin-right: .7em;
 	margin-left: -.7em;
 	font-size: 32px;
 	vertical-align: top;
-	line-height: .3em;
 	position: relative;
+}
+
+li#admin_menu_logout_link:before {
+	content: "\f007";
+	margin-right: .5em;
+	font-size: 14px;
+}
+
+#admin_menu li.admin_menu_toplevel a:before {
+	margin-right: .7em;
+	margin-left: -.7em;
+	font-size: 18px;
+	color: #191e1f;
+	text-shadow: 0 1px 0 rgba(255,255,255,.1);
+	position: relative;
+}
+
+li#admin_menu_admin_link a:before {
+	content: "\f015";
+}
+
+li#admin_menu_tools_link a:before {
+	 content: "\f000";
+}
+
+li#admin_menu_plugins_link a:before {
+	 content: "\f085";
 }
 
 /* Action Icons */
@@ -163,7 +142,7 @@ table.tblSorter tbody td.actions {
 td.actions .button {
 	overflow: hidden;
 	color: #191e1f;
-	font-size: 16px;
+	font-size: 14px;
 	background: none;
 	text-indent: 0;
 	height: 32px;
@@ -174,28 +153,30 @@ td.actions .button {
 td.actions .button:before {
 	margin-right: 1em;
 	margin-left: .2em;
+	margin-top: .3em;
 	font-size: 1.5em;
 	text-shadow: 0 1px 0 rgba(255,255,255,.2);
 }
 
-	td.actions .button:hover:before {
+	td.actions .button:hover:before,
+	#toggle_plugins:hover:before {
 		color: #28cbc3;
 	}
 
 td.actions .button_stats:before {
-	content: "*";
+	content: "\f080";
 }
 
 td.actions .button_share:before {
-	content: "w";
+	content: "\f045";
 }
 
 td.actions .button_edit:before {
-	content: "8";
+	content: "\f044";
 }
 
 td.actions .button_delete:before {
-	content: "X";
+	content: "\f05c";
 }
 
 	td.actions .button_delete:hover:before {
@@ -210,6 +191,20 @@ td.actions .button.disabled, #add-button.disabled {
 
 #wrap > h1:first-child {
 	display: none;
+}
+
+#toggle_plugins {
+	background: none !important;
+	text-indent: 0 !important;
+	overflow: hidden;
+	width: 20px !important;
+	height: 20px !important;
+	margin-left: 1em !important;
+}
+#toggle_plugins:before {
+	content: "\f022";
+	font-size: 20px;
+	margin-right: 1em;
 }
 
 

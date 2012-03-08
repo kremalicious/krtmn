@@ -28,7 +28,7 @@ $items = yourls_api_stats( 'last', 1 );
 <body id="public">
 
 	<header>
-		<h1 class="icon link"><a href="/admin">krt.mn</a></h1>
+		<h1><i class="icon-bookmark"></i><a href="/admin">krt.mn</a></h1>
 	</header>
 	<article role="main">
 		<?php foreach( $items['links'] as $item ) { ?>
@@ -39,7 +39,7 @@ $items = yourls_api_stats( 'last', 1 );
 	<footer>
 		
 			<p><small>personal url shortener of web &amp; ui designer <a href="http://mkretschmann.com">matthias kretschmann</a>. You should follow me on <a href="http://twitter.com/kremalicious">twitter</a>.</small></p>
-			<p><small>icon font <a href="http://iconsweets.com/">iconsweets</a></small></p>
+			<p><small>icon font <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a></small></p>
 		
 	</footer>
 	

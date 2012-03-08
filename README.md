@@ -8,10 +8,10 @@ It has a public front page under http://krt.mn with the latest shortened url. Th
 
 ## License & Usage
 
-As the original YOURLS you're free to do whatever you want with this as long as you're not reusing the [iconsweets font](http://iconsweets.com/). And using this without further modifications as your own url shortener isn't a good idea either.
+As the original YOURLS you're free to do whatever you want with this. But using this without further modifications as your own url shortener isn't a good idea either.
 
 ## Acknowledgements
 
 Many thanks to:
- * Ozh Richard ([@ozh](https://twitter.com/ozh)) for creating yourls
- * Yummygum ([@yummygum](https://twitter.com/yummygum)) for creating the [iconsweets icon font](http://iconsweets.com/)
+* Ozh Richard ([@ozh](https://twitter.com/ozh)) for creating yourls
+* Fort Awesome ([@fortaweso_me](https://twitter.com/fortaweso_me)) for creating the [Font Awesome icon font](http://fortawesome.github.com/Font-Awesome)

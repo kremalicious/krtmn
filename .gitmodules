@@ -1,3 +1,6 @@
 [submodule "user/plugins/yourls-pseudonymize"]
 	path = user/plugins/yourls-pseudonymize
 	url = https://github.com/ubicoo/yourls-pseudonymize.git
+[submodule "user/fonts/font-awesome"]
+	path = user/fonts/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git

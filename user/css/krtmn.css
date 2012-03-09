@@ -76,6 +76,9 @@ a:hover {
 ::-moz-selection { background: #000; color: #fff; }
 ::selection { background: #000; color: #fff }
 
+img {
+	max-width: 100%;
+}
 /* ============================================================== */
 /*  Icons */
 /* ============================================================== */
@@ -90,7 +93,9 @@ a:hover {
 li#admin_menu_logout_link:before,
 #admin_menu li.admin_menu_toplevel a:before,
 td.actions .button:before,
-#toggle_plugins {
+#toggle_plugins:before,
+#share_tw:before,
+body.infos #informations + h3 a:before {
 	font-family: FontAwesome;
 	font-weight: normal;
 	font-style: normal;
@@ -205,6 +210,21 @@ td.actions .button.disabled, #add-button.disabled {
 	content: "\f022";
 	font-size: 20px;
 	margin-right: 1em;
+}
+
+#share_tw {
+	background: none;
+	padding-left: 0;
+	font-weight: normal !important;
+}
+
+#share_tw:before {
+	content: "\f081";
+	margin-right: .5em;
+}
+
+body.infos #informations + h3 a:before {
+	content: "\f02e";
 }
 
 
@@ -526,22 +546,45 @@ table.tblSorter td.clicks {
 /*  Stats */
 /* ============================================================== */
 
-h3 span.label {
+body.infos h3 {
+	font-size: 1em;
+}
+
+body.infos h3 span.label {
 	width: 10em;
 	font-weight: normal;
-	font-size: .7em;
+	font-size: .9em;
 }
+
+body.infos #informations + h3 img {
+	display: none;
+}
+
+body.infos #informations + h3 a:before {
+	color: #191e1f;
+	margin-right: .6em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
 
 #tabs ul#headers,
 ul.toggle_display {
-	border-bottom: 1px solid #333;
-	box-shadow: 0 1px 0 rgba(255,255,255,.2);
-	padding: 0;
+	border: none;
+}
+
+.stat_tab h2 {
+	font-size: 1em;
+	font-weight: normal;
 }
 
 .tab {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+#tabs ul#headers li a {
+	padding: .3em .7em;
+	display: inline-block;
 }
 
 #tabs ul#headers li a,
@@ -557,25 +600,21 @@ ul.toggle_display {
 
 #tabs ul#headers li a.selected,
 #stats_lines li a.selected {
-	background-color: rgba(0,0,0,.1);
-	background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 100%);
-	background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0) 41%, rgba(255,255,255,0) 100%);
-	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.03)), color-stop(40%,rgba(255,255,255,0.03)), color-stop(41%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
-	background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
-	background-image: -o-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
-	background-image: -ms-linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
-	background-image: linear-gradient(-45deg, rgba(255,255,255,0.03) 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 100%);
-	border-radius: 5px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+	background: rgba(0,0,0,.1);
+	border-radius: 20px;
 	border: 1px solid #354143;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-	
-	color: rgba(0,0,0,0);
+	box-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
+#tabs ul#headers li a.selected h2,
+#stats_lines li a.selected h2 {
+	text-shadow: 0 1px 0 rgba(255,255,255,.2);
+	color: #191e1f;
 }
 
 #tabs ul#headers li a:hover {
-	background-color: rgba(0,0,0,.1);
+	background: rgba(0,0,0,.1);
+	border-radius: 20px;
 }
 
 #stats_lines li a.selected:hover {
@@ -594,6 +633,10 @@ ul.toggle_display {
 #historical_clicks li,
 #historical_clicks li:hover {
 	background: none !important;
+}
+
+#stat_line_all {
+	margin-right: 23px;
 }
 
 /* ============================================================== */

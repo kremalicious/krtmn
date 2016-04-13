@@ -1,25 +1,31 @@
 // Init some stuff
 $(document).ready(function(){
 	$('#add-url, #add-keyword').keypress(function(e){
-		if (e.which == 13) {add();}
+		if (e.which == 13) {add_link();}
 	});
-	reset_url();
-	$('#new_url_form').attr('action', 'javascript:add();');
+	add_link_reset();
+	$('#new_url_form').attr('action', 'javascript:add_link();');
 	
 	$('input.text').focus(function(){
 		$(this).select();
 	});
 	
-	// this one actually has little impact, the .hasClass('disabled') in each edit(), remove() etc... fires faster
-	$('a.button').live('click', function() {
+	// this one actually has little impact, the .hasClass('disabled') in each edit_link_display(), remove() etc... fires faster
+	$(document).on( 'click', 'a.button', function() {
 		if( $(this).hasClass('disabled') ) {
 			return false;
 		}
 	});
+	
+	// When Searching, explode search text in pieces -- see split_search_text_before_search()
+	$('#filter_form').submit( function(){
+		split_search_text_before_search();
+		return true;
+	});
 });
 
 // Create new link and add to table
-function add() {
+function add_link() {
 	if( $('#add-button').hasClass('disabled') ) {
 		return false;
 	}
@@ -38,11 +44,11 @@ function add() {
 				$('#main_table tbody').prepend( data.html ).trigger("update");
 				$('#nourl_found').css('display', 'none');
 				zebra_table();
-				increment();
+				increment_counter();
 				toggle_share_fill_boxes( data.url.url, data.shorturl, data.url.title );
 			}
 
-			reset_url();
+			add_link_reset();
 			end_loading("#add-button");
 			end_disable("#add-button");
 
@@ -63,7 +69,7 @@ function toggle_share_fill_boxes( url, shorturl, title ) {
 }
 
 // Display the edition interface
-function edit(id) {
+function edit_link_display(id) {
 	if( $('#edit-button-'+id).hasClass('disabled') ) {
 		return false;
 	}
@@ -82,7 +88,7 @@ function edit(id) {
 }
 
 // Delete a link
-function remove(id) {
+function remove_link(id) {
 	if( $('#delete-button-'+id).hasClass('disabled') ) {
 		return false;
 	}
@@ -104,7 +110,7 @@ function remove(id) {
 
 					zebra_table();
 				});
-				decrement();
+				decrement_counter();
 			} else {
 				alert('something wrong happened while deleting :/');
 			}
@@ -113,21 +119,21 @@ function remove(id) {
 }
 
 // Redirect to stat page
-function stats(link) {
+function go_stats(link) {
 	window.location=link;
 }
 
 // Cancel edition of a link
-function hide_edit(id) {
+function edit_link_hide(id) {
 	$("#edit-" + id).fadeOut(200, function(){
 		end_disable('#actions-'+id+' .button');
 	});
 }
 
 // Save edition of a link
-function edit_save(id) {
+function edit_link_save(id) {
 	add_loading("#edit-close-" + id);
-	var newurl = $("#edit-url-" + id).val();
+	var newurl = encodeURI( $("#edit-url-" + id).val() );
 	var newkeyword = $("#edit-keyword-" + id).val();
 	var title = $("#edit-title-" + id).val();
 	var keyword = $('#old_keyword_'+id).val();
@@ -169,20 +175,20 @@ function zebra_table() {
 }
 
 // Ready to add another URL
-function reset_url() {
-	$('#add-url').val('http://').focus();
+function add_link_reset() {
+	$('#add-url').val('').focus();
 	$('#add-keyword').val('');
 }
 
 // Increment URL counters
-function increment() {
+function increment_counter() {
 	$('.increment').each(function(){
 		$(this).html( parseInt($(this).html()) + 1);
 	});
 }
 
 // Decrement URL counters
-function decrement() {
+function decrement_counter() {
 	$('.increment').each(function(){
 		$(this).html( parseInt($(this).html()) - 1 );
 	});
@@ -200,3 +206,16 @@ function toggle_share(id) {
 	
 	toggle_share_fill_boxes( longurl, shorturl, title );
 }
+
+// When "Search" is clicked, split search text to beat servers which don't like query string with "http://"
+// See https://github.com/YOURLS/YOURLS/issues/1576
+function split_search_text_before_search() {
+	// Add 2 hidden fields and populate them with parts of search text
+	$("<input type='hidden' name='search_protocol' />").appendTo('#filter_form');
+	$("<input type='hidden' name='search_slashes' />").appendTo('#filter_form');
+	var search = get_protocol_slashes_and_rest( $('#filter_form input[name=search]').val() );
+	$('#filter_form input[name=search]').val( search.rest );
+	$('#filter_form input[name=search_protocol]').val( search.protocol );
+	$('#filter_form input[name=search_slashes]').val( search.slashes );
+}
+

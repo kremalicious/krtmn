@@ -1,7 +1,10 @@
 <?php
 
 // Make sure we're in YOURLS context
-if( !defined( 'YOURLS_ABSPATH' ) ) die();
+if( !defined( 'YOURLS_ABSPATH' ) ) {
+	echo "Try using a URL without the /pages/ part";
+	die();
+}
 
 // Display page content. Any PHP, HTML and YOURLS function can go here.
 $url = YOURLS_SITE . '/examplepage';

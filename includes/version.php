@@ -1,5 +1,12 @@
 <?php
-// Bump this when updating the zip package
-define('YOURLS_VERSION', '1.5.1-gamma');
-define('YOURLS_DB_VERSION', '482');
-?>
+/**
+ * YOURLS version
+ *
+ */
+define( 'YOURLS_VERSION', '1.7.1' );
+
+/**
+ * YOURLS DB version. Increments when changes are made to the DB schema, to trigger a DB update
+ *
+ */
+define( 'YOURLS_DB_VERSION', '482' );

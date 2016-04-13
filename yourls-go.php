@@ -1,6 +1,6 @@
 <?php
-define('YOURLS_GO', true);
-require_once( dirname(__FILE__).'/includes/load-yourls.php' );
+define( 'YOURLS_GO', true );
+require_once( dirname( __FILE__ ) . '/includes/load-yourls.php' );
 
 // Variables should be defined in yourls-loader.php, if not try GET request (old behavior of yourls-go.php)
 if( !isset( $keyword ) && isset( $_GET['id'] ) )
@@ -8,7 +8,7 @@ if( !isset( $keyword ) && isset( $_GET['id'] ) )
 $keyword = yourls_sanitize_string( $keyword );
 
 // First possible exit:
-if ( !$keyword ) {
+if ( !isset( $keyword ) ) {
 	yourls_do_action( 'redirect_no_keyword' );
 	yourls_redirect( YOURLS_SITE, 301 );
 }
@@ -17,24 +17,23 @@ if ( !$keyword ) {
 $url = yourls_get_keyword_longurl( $keyword );
 
 // URL found
-if( !empty($url) ) {
+if( !empty( $url ) ) {
+	yourls_do_action( 'redirect_shorturl', $url, $keyword );
+
 	// Update click count in main table
 	$update_clicks = yourls_update_clicks( $keyword );
+
 	// Update detailed log for stats
 	$log_redirect = yourls_log_redirect( $keyword );
 	
-	yourls_do_action( 'redirect_shorturl', $url, $keyword );
-
 	yourls_redirect( $url, 301 );
 
 // URL not found. Either reserved, or page, or doesn't exist
 } else {
 
 	// Do we have a page?
-	if ( file_exists(YOURLS_PAGEDIR."/$keyword.php") ) {
-		// Include YOURLS functions we've skipped, they might be of use
-		require_once( YOURLS_INC.'/functions-html.php' );
-		yourls_page($keyword);
+	if ( file_exists( YOURLS_PAGEDIR . "/$keyword.php" ) ) {
+		yourls_page( $keyword );
 
 	// Either reserved id, or no such id
 	} else {

@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************/
-/* This class stores associative arrays in an xml formated string.       */
+/* This class stores associative arrays in an xml formatted string.       */
 /* There's also a function thar retrieves them. If you try to use        */ 
 /* xml2array with a general xml, it can fail, since there can be some    */
 /* repeated indexes....                                                  */
@@ -79,5 +79,3 @@ class yourls_array2xml {
 
 }//End of the class
 
-
-?>

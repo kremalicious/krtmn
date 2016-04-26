@@ -28,10 +28,10 @@ function krtmn_change_title( $value, $title ) {
 
 
 // custom css
-yourls_add_action( 'html_head', 'krtmn_css' );
+yourls_add_action( 'html_head', 'krtmn_assets' );
 
-function krtmn_css() {
-	echo '<link rel="stylesheet" href="/user/css/krtmn.css" />';
+function krtmn_assets() {
+	echo '<link rel="stylesheet" href="'. YOURLS_SITE .'/user/css/krtmn.css" />';
 }
 
 // favicon & touch icons
@@ -49,7 +49,7 @@ function krtmn_touch_icons() {
 yourls_add_action( 'html_head', 'krtmn_viewport' );
 
 function krtmn_viewport() {
-	echo '<meta name="viewport" content="width=device-width">';
+	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 }
 
 

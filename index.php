@@ -46,6 +46,23 @@ $items = yourls_api_stats( 'last', 1 );
     	</footer>
     </article>
 
+    <!-- Piwik -->
+    <script>
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.krt.mn"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.kremalicious.com/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 5]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="//analytics.kremalicious.com/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
 	<script>
 	    var _gaq=[['_setAccount','UA-1441794-9'],['_trackPageview']];
 	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

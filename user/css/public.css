@@ -7,6 +7,47 @@
     height: 100vh;
 }
 
+#public h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+#public main {
+    margin-bottom: 3rem;
+}
+
+#public main p {
+    font-size: 1.2rem;
+}
+
+#public .label,
+#public .title {
+    display: block;
+}
+
+#public .title {
+    color: #6b7f88;
+}
+
+#public .label {
+    margin-bottom: 1rem;
+    font-weight: 500
+}
+
 .content {
     max-width: 35em;
+}
+
+.logo {
+    fill:none;
+    stroke: #6b7f88;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#public footer p {
+    color: #80939b;
 }

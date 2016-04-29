@@ -1,0 +1,29 @@
+ul#admin_menu {
+    min-height: 0;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #3a9085;
+    font-size: 1rem;
+}
+
+ul#admin_menu li {
+    display: inline-block;
+}
+
+ul#admin_menu li a {
+
+}
+
+.admin_menu_toplevel a,
+#admin_menu_help_link a {
+    padding: 1rem;
+    margin: 0 1rem;
+    display: block;
+}
+
+.admin_menu_toplevel a:first-child {
+    margin-left: -1em;
+}
+
+#admin_menu_logout_link {
+    float: right;
+}

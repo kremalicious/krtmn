@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html, body {
+	background: #e7eef4;
+}
+
+body {
+    padding: 2rem;
+    padding-top: 0;
+}
+
+/* font reset */
+html {
+    font-size: 16px;
+}
+
+/* Typography reset */
+body,
+div, p, td,
+table.tblSorter,
+Input.text, select, textarea,
+input.button,
+table.tblSorter tbody td {
+    font-size: 1rem;
+    font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    color: #6b7f88;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+    color: #015565;
+}
+
+/* Small text */
+#main_table tfoot th,
+#main_table tfoot th div,
+table.tblSorter thead tr th,
+table.tblSorter tfoot tr th,
+table.tblSorter th.header,
+thead th,
+thead th div {
+    font-size: .8rem;
+}
+
+/* Space/background reset */
+#wrap,
+#new_url,
+#new_url div,
+#footer p,
+table.tblSorter,
+table.tblSorter thead tr .tablesorter-header,
+table.tblSorter tbody td,
+table.tblSorter tbody tr.normal-row td,
+table.tblSorter tfoot tr,
+table.tblSorter tfoot tr th,
+table.tblSorter thead tr th, table.tblSorter tfoot tr th, table.tblSorter th.header,
+Input.text, select, textarea,
+div.share {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+
+#wrap > h1 { display: none; }
+
+
+/* Links */
+a, a:link, a:active, a:visited {
+	color: #3a9085;
+	text-decoration: none;
+    transition: .2s ease-out;
+}
+
+a:hover,
+a:focus {
+    color: #57bbae;
+}
+
+
+strong {
+    font-weight: 500;
+}

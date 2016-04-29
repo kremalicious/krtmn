@@ -1,0 +1,28 @@
+/* Forms */
+
+Input.text,
+select,
+textarea {
+    background: rgba(255,255,255,.6);
+    padding: .5rem;
+    font-weight: 500;
+    margin: 0;
+    border: 1px solid transparent;
+    transition: .2s ease-out;
+}
+
+Input.text:focus,
+select:focus,
+textarea:focus {
+    background: #fff;
+    border: 1px solid #3a9085;
+    outline: 0;
+    box-shadow: 0 1px 10px rgba(1, 85, 101, .15);
+}
+
+label {
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: .3rem;
+    display: block;
+}

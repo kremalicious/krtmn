@@ -15,7 +15,7 @@ $items = yourls_api_stats( 'last', 1 );
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>krt.mn</title>
-	<meta name="description" content="personal url shortener of web &amp; ui designer matthias kretschmann">
+	<meta name="description" content="personal url shortener of designer &amp; developer matthias kretschmann">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,15 +34,33 @@ $items = yourls_api_stats( 'last', 1 );
 
     <article class="content">
         <header>
-    		<h1><i class="icon-bookmark"></i><a href="<?php yourls_site_url(); ?>/admin">krt.mn</a></h1>
+            <svg class="logo" version="1.1"
+            	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            	width="60px" height="60px" viewBox="0 0 60 60">
+                <g>
+                	<line class="st0" x1="29" y1="43" x2="29" y2="59"/>
+                	<line class="st0" x1="29" y1="1" x2="29" y2="5"/>
+                	<line class="st0" x1="29" y1="21" x2="29" y2="27"/>
+                	<polygon class="st0" points="51,21 7,21 7,5 51,5 59,13 	"/>
+                	<polygon class="st0" points="9,43 53,43 53,27 9,27 1,35 	"/>
+                </g>
+            </svg>
+
+    		<h1><a href="<?php yourls_site_url(); ?>/admin">krt.mn</a></h1>
     	</header>
     	<main role="main">
     		<?php foreach( $items['links'] as $item ) { ?>
-    			<p>Latest short url: <a href="<?php echo $item['shorturl']; ?>"><?php echo $item['shorturl']; ?> <span class="title"><?php echo $item['title']; ?></span></a></p>
+    			<p>
+                    <span class="label">latest short url:</span>
+                    <a href="<?php echo $item['shorturl']; ?>">
+                        <?php echo $item['shorturl']; ?>
+                        <span class="title"><?php echo $item['title']; ?></span>
+                    </a>
+                </p>
     		<?php } ?>
     	</main>
     	<footer>
-			<p><small>personal url shortener of designer &amp; developer <a href="https://matthiaskretschmann.com">matthias kretschmann</a>. You should follow me on <a href="https://twitter.com/kremalicious">twitter</a>.</small></p>
+			<p>personal url shortener of designer &amp; developer <a href="https://matthiaskretschmann.com">matthias kretschmann</a>. you should follow me on <a href="https://twitter.com/kremalicious">twitter</a>.</p>
     	</footer>
     </article>
 

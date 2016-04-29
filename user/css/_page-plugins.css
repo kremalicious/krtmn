@@ -1,0 +1,29 @@
+
+body.desktop td.actions input,
+body.desktop td.actions a {
+    visibility: visible;
+
+}
+
+tr.plugin .actions {
+    text-align: center;
+}
+
+tr.plugin .actions a {
+    border: 1px solid #b4bfc4;
+    text-transform: uppercase;
+    padding: .25rem .5rem;
+    font-size: .7rem;
+    border-radius: .25rem;
+}
+
+tr.plugin.active td,
+#main_table tbody tr.plugin.active td,
+table.tblSorter tbody tr.plugin.active td {
+    background: rgba(72, 168, 114, .1);
+    border-color: #57bbae;
+}
+
+tr.plugin.active a {
+    font-weight: normal;
+}

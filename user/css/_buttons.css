@@ -1,0 +1,10 @@
+/*Buttons*/
+input.button {
+    background: #57bbae;
+    color: #fff;
+    border: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+}

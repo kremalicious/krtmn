@@ -1,82 +1,15 @@
-html, body {
-	background: #e7eef4;
-}
 
-/* font reset */
-html {
-    font-size: 16px;
-}
+@import '_h5bp.css';
+@import '_scaffolding.css';
+@import '_buttons.css';
+@import '_forms.css';
+@import '_tables.css';
+@import '_menu.css';
 
-/* Typography reset */
-body,
-div, p, td,
-table.tblSorter,
-Input.text, select, textarea,
-input.button,
-table.tblSorter tbody td {
-    font-size: 1rem;
-    font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.4;
-    color: #56666e;
-}
+@import '_page-login.css';
+@import '_page-tools.css';
+@import '_page-plugins.css';
 
-/* Small text */
-#main_table tfoot th,
-#main_table tfoot th div,
-table.tblSorter thead tr th,
-table.tblSorter tfoot tr th,
-table.tblSorter th.header,
-thead th,
-thead th div {
-    font-size: .8rem;
-}
-
-/* Space/background reset */
-#wrap,
-#new_url,
-#new_url div,
-#footer p,
-table.tblSorter,
-table.tblSorter thead tr .tablesorter-header,
-table.tblSorter tbody td,
-table.tblSorter tbody tr.normal-row td,
-table.tblSorter tfoot tr,
-table.tblSorter tfoot tr th,
-table.tblSorter thead tr th, table.tblSorter tfoot tr th, table.tblSorter th.header,
-Input.text, select, textarea,
-div.share {
-    background: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-}
-
-#wrap > h1 { display: none; }
-
-
-/* Links */
-a, a:link, a:active, a:visited {
-	color: #3a9085;
-	text-decoration: none;
-}
-
-ul#admin_menu li {
-    display: inline-block;
-}
-
-.admin_menu_toplevel a,
-#admin_menu_help_link a {
-    padding: 1rem;
-    margin: 0 1rem;
-}
-
-.admin_menu_toplevel a:first-child {
-    margin-left: -1em;
-}
-
-#admin_menu_logout_link {
-    float: right;
-}
 
 /*
 
@@ -84,90 +17,91 @@ ul#admin_menu li {
 
 */
 
-/* Forms */
-Input.text, select, textarea {
-    background: #fff;
-    padding: .3rem .5rem;
-    font-weight: 500;
-}
-
-Input.text:focus, select:focus, textarea:focus {
-    border: none;
-    outline: none;
-}
-
-/*Buttons*/
-input.button {
-    background: #3a9085;
-    color: #fff;
-    border: none;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: .5rem 1rem;
-}
 
 #new_url_form {
     padding: 3rem 0;
     margin: 3rem 0;
-    border-top: 1px solid #afc3cb;
-    border-bottom: 1px solid #afc3cb;
-    text-align: right;
+    text-align: center;
 }
 
 #add-url,
 #add-keyword,
 #add-button {
     padding: 1rem;
-    font-size: 1.2rem;
+}
+
+#add-url,
+#add-keyword {
+    font-size: 1.5rem;
 }
 
 #add-url {
-    width: calc(100% - 2rem);
+    width: 100%;
     margin-bottom: 1rem;
+
+     /*hide that weird : */
+    position: relative;
+    margin-top: -20px;
+}
+
+#add-keyword,
+#add-button {
+    width: 100%;
+}
+
+#add-keyword {
+    display: block;
+    max-width: 10em;
+    margin: .5rem auto 2rem auto;
 }
 
 #add-button {
     padding: 1rem 2rem;
+    font-size: 1.2rem;
 }
 
 #new_url_form strong:first-child { display: none; }
 
-#main_table {
-    margin: 3rem 0;
-    max-width: 100%;
-}
-
-#main_table tbody td {
-    padding: 1rem 0;
-}
-
-#main_table tfoot th {
-    border-top: 1px solid #afc3cb;
-    margin-top: 2rem;
-    padding-top: 2rem;
-}
-
-#main_table .timestamp,
-#main_table .ip {
+#main_table .timestamp {
     font-size: .8rem;
     vertical-align: middle;
     color: #80939b;
 }
 
+#main_table_head_ip,
+#main_table .ip {
+    display: none;
+}
+
 #main_table .clicks {
     vertical-align: middle;
     text-align: right;
+    font-style: italic;
+    font-weight: 500;
 }
 
 td.url small a {
     color: #80939b;
 }
 
-table.tblSorter tbody tr.alt-row:hover td,
-table.tblSorter tbody tr.normal-row:hover td {
-    background: rgba(255,255,255,.3);
-}
-
 #shareboxes {
     margin-bottom: 3rem;
+}
+
+#footer p {
+    font-size: .8rem;
+    color: #b4bfc4;
+}
+
+#footer p a {
+    background-color: transparent;
+}
+
+
+#filter_form {
+
+}
+
+#pagination {
+
 }

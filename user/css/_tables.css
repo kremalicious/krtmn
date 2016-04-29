@@ -1,0 +1,36 @@
+#main_table {
+    margin: 3rem 0;
+    max-width: 100%;
+    width: auto;
+}
+
+table.tblSorter tbody td {
+    padding: 1rem;
+}
+
+#main_table thead tr th,
+#main_table tbody tr td {
+    padding: 1rem;
+}
+
+#main_table thead tr th,
+table.tblSorter thead tr th {
+    border-bottom: 1px solid #afc3cb;
+    font-weight: 500;
+}
+
+#main_table tbody td,
+table.tblSorter tbody td {
+    border-bottom: 1px dashed #afc3cb;
+}
+
+#main_table tfoot th {
+    border-top: 1px solid #afc3cb;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+table.tblSorter tbody tr.alt-row:hover td,
+table.tblSorter tbody tr.normal-row:hover td {
+    background: none;
+}

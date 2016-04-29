@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: My Own Stuff
-Plugin URI: http://mkretschmann.com
-Description: modify title, custom css file
+Plugin Name: Kremalicious
+Plugin URI: http://matthiaskretschmann.com
+Description: Customize all the things.
 Version: 0.1
 Author: kremalicious
-Author URI: http://mkretschmann.com
+Author URI: http://matthiaskretschmann.com
 */
 
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
@@ -51,7 +51,5 @@ yourls_add_action( 'html_head', 'krtmn_viewport' );
 function krtmn_viewport() {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 }
-
-
 
 ?>

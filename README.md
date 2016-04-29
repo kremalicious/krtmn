@@ -4,11 +4,13 @@
 
 It has a public front page under https://krt.mn with the latest shortened url. The backend is a completely restyled interface based on the YOURLS default styles (which are quite ugly). Here's what it looks like in the admin area:
 
-![](http://f.cl.ly/items/2M0C2N1z0q3S0J0O0c2J/krtmn-admin-screen.png)
+![](screenshot.png)
+
+![](screenshot2.png)
 
 Everything custom is happening in `/user`:
 
-- `user/plugins/my-own-stuff/plugin.php` adds css file link and a bit more dynamically to the html `head`
+- `user/plugins/kremalicious/plugin.php` adds css file link and a bit more dynamically to the html `head`
 - `user/css/krtmn.css` overwrites the default styles
 
 
